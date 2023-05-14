@@ -30,6 +30,8 @@ const getExercise = async (params: any) => {
           return checkType ? 'double[][]' : 'int[][]';
         case 6:
           return 'String[][]';
+        default:
+          return '';
       }
     });
     if (data) {

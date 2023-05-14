@@ -1,4 +1,4 @@
-import { IsDefined, IsArray } from 'class-validator';
+import { IsDefined, IsArray, IsOptional } from 'class-validator';
 import { Category } from 'models/category';
 
 export class CreateExerciseDto {
@@ -17,9 +17,9 @@ export class CreateExerciseDto {
     active?: boolean;
   };
 
-  @IsDefined()
+  @IsOptional()
   @IsArray()
-  public params: Array<number>;
+  public params?: Array<number>;
 
   @IsDefined()
   @IsArray()

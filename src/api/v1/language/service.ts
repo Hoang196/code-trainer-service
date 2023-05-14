@@ -6,7 +6,7 @@ import { DEFAULT_PAGING } from 'utils/constants';
 
 const getLanguages = async (query: any) => {
   const { page, page_size, search } = query;
-  const queryParams: any = {};
+  const queryParams: any = { active: true };
 
   if (search) {
     queryParams.$or = [{ name: { $regex: search, $options: 'i' } }];
